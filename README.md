@@ -17,8 +17,6 @@ python -m find_nearest_restaurants find -- 37.7899138671344 -122.405232892524 3
 ```
 The result would look like this:
 ```
-python -m find_nearest_restaurants find -- 37.7899138671344 -122.405232892524 3 
-```
                                                            Restaurant Name                                           Address  Distance
 0                                                            Spice Affairs     SUTTER ST: CLAUDE LN to GRANT AVE (216 - 299)  0.000000
 1                                         San Francisco Street Foods, Inc.  POST ST: KEARNY ST to ROBERT KIRK LN (100 - 140)  0.000764
