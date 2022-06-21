@@ -26,21 +26,10 @@ def main(
 ) -> None:
     return
 
-
-@app.command()
-def find(
-    latitude: float = typer.Argument(...,
-        help = "Latitude of your location"
-    ),
-
-    longitude: float = typer.Argument(...,
-        help = "Longitude of your location"
-    ),
-
-    k: int = typer.Argument(...,
-        help = "Number of restaurants to be displayed"
-    )
-):
+def check_inputs(latitude, longitude, k):
+    """
+    Checks inputs are following the right format
+    """
     if k <= 0:
         typer.secho(ERRORS[K_LESS_0] + ": {k}".format(k=k))
         raise typer.Exit(1)
@@ -60,6 +49,25 @@ def find(
     except:
         typer.secho(ERRORS[LONGITUDE_OUT_OF_RANGE] + ": {longitude}".format(longitude=longitude))
         raise typer.Exit(3)
+
+@app.command()
+def find(
+    latitude: float = typer.Argument(...,
+        help = "Latitude of your location"
+    ),
+
+    longitude: float = typer.Argument(...,
+        help = "Longitude of your location"
+    ),
+
+    k: int = typer.Argument(...,
+        help = "Number of restaurants to be displayed"
+    )
+):
+    """ 
+    Gets the top k restaurants and displays them in the terminal
+    """
+    check_inputs(latitude, longitude, k)
 
     coordinates = (latitude, longitude)
     
