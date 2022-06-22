@@ -28,12 +28,13 @@ The result would look like this:
 - I have developed the project in Python as this is the language I am the most familiar with. 
 - In order to store the data and preprocess it I have used a Pandas dataframe as it allows easy and fast preprocessing of data, as well as an extended set of further functionality if the scope of this project would need to be extended.
 - I have developed the CLI interface using the Typer library, as it is easy to learn, use and scale.
-- For the backend of the app I have used an Object Oriented Designed as it is the most appropiate and tried following most of the SOLID principles
+- For the backend of the app I have used an Object Oriented Designed as it is the most appropiate and tried following most of the SOLID principles.
 
 ## What I would have done if I had more time
 
-- I would have removed all the hard coding from the pandas dataframe in find_restaurants.py and add it to a config file from which I would take the values
-- Since the distance measure offered by the distance between latitude and longitude is not very indicative of actual walking or driving distance I would use the Bing Distance Matrix API to compute the real-life distance and the estimated time to arrival
-- I would have also liked to build a web API that would display the current location and closest restaurants on a map
+- I would have removed all the hard coding from the pandas dataframe in find_restaurants.py and add it to a config file from which I would take the values.
+- Since the distance measure offered by the distance between latitude and longitude is not very indicative of actual walking or driving distance I would use the Bing Distance Matrix API to compute the real-life distance and the estimated time to arrival.
+- I would have also liked to build a web API that would display the current location and closest restaurants on a map.
+- I would have added tests for each component to get 100% test coverage.
 
 
